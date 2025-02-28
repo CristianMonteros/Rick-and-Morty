@@ -1,17 +1,18 @@
 import { useState } from "react";
+import Contador from "./components/Contador";
 import Guardar from "./components/Guardar";
-import Personajes from "./components/Personajes"; // 👈 Importamos el componente
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState("");
 
   return (
     <div>
-      <h1>Rick and Morty API</h1>
-      <Guardar />
-      <Personajes count={count} />
+      <h1>Rick and Morty</h1>
+      <Contador setCount={setCount} />
+      <Guardar count={count} />
     </div>
   );
 }
 
 export default App;
+
